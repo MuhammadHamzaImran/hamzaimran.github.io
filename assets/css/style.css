@@ -476,7 +476,7 @@ section {
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
-.skills .progress {
+/* .skills .progress {
   height: 100px;
   display: block;
   background: none;
@@ -508,15 +508,36 @@ section {
   height: 10px;
   transition: 0.9s;
   background-color: #149ddd;
-}
+} */
 
 /* fixed height for all images */
 .skills img{
-  width: 20%;
-  height: 10%;
+  width: 100%;
+  height: auto;
+  /* height: 10%; */
   
 
 }
+
+.skills-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* This ensures the gallery is responsive */
+  gap: 20px; /* Space between images */
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.skill img {
+  max-width: 100%; /* Ensures images fit within the grid cells */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.skill img:hover {
+  transform: scale(1.1); /* Adds a hover effect */
+}
+
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
